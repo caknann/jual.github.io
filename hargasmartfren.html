@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harga Paket Data - Digital Store</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.75rem;
+            font-weight: bold;
+            color: #2563eb;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #4b5563;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #2563eb;
+        }
+
+        .price-table {
+            max-width: 800px;
+            margin: 80px auto;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        .price-table th, .price-table td {
+            border: 1px solid #ddd;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        .price-table th {
+            background-color: #2563eb;
+            color: white;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #1f2937;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Fhiks Store</div>
+            <div class="nav-links">
+                <a href="paketdata.html">Kembali</a>
+            </div>
+        </div>
+    </nav>
+
+    <h1 style="text-align: center; margin-top: 80px;">Harga Paket Data Kartu</h1>
+    <h3 style="text-align: center; margin-top: 80px;">Kouta Harian dan Mingguan</h3>
+    <table class="price-table">
+        <thead>
+            <tr>
+                <th>Nominal</th>
+                <th>Harga</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1GB 1 Hari</td>
+                <td>Rp 4.000</td>
+            </tr>
+            <tr>
+                <td>2GB 1 Hari</td>
+                <td>Rp 8.500</td>
+            </tr>
+            <tr>
+                <td>2GB 3 Hari</td>
+                <td>Rp 10.000</td>
+            </tr>
+            <tr>
+                <td>3GB 7 Hari</td>
+                <td>Rp 12.000</td>
+            </tr>
+            <tr>
+                <td>2.5GB 5 Hari</td>
+                <td>Rp 12.000</td>
+            </tr>
+            <tr>
+                <td>100GB 1 Hari</td>
+                <td>Rp 12.00</td>
+            </tr>
+            <tr>
+                <td>5GB 7 Hari</td>
+                <td>Rp 19.000</td>
+            </tr>
+            <tr>
+                <td>100GB 7 Hari</td>
+                <td>Rp 44.000</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3 style="text-align: center; margin-top: 80px;">Kouta Bulanan</h3>
+    <table class="price-table">
+        <thead>
+            <tr>
+                <th>Nominal</th>
+                <th>Harga</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1GB 30 Hari</td>
+                <td>Rp 11.000</td>
+            </tr>
+            <tr>
+                <td>2GB 30 Hari</td>
+                <td>Rp 12.000</td>
+            </tr>
+            <tr>
+                <td>3GB 30 Hari</td>
+                <td>Rp 13.000</td>
+            </tr>
+            <tr>
+                <td>7GB 30 Hari</td>
+                <td>Rp 17.000</td>
+            </tr>
+            <tr>
+                <td>9GB 30 Hari</td>
+                <td>Rp 28.000</td>
+            </tr>
+            <tr>
+                <td>14GB 30 Hari</td>
+                <td>Rp 38.000</td>
+            </tr>
+            <tr>
+                <td>20GB 30 Hari</td>
+                <td>Rp 48.000</td>
+            </tr>
+            <tr>
+                <td>42GB 30 Hari</td>
+                <td>Rp 80.000</td>
+            </tr>
+            <tr>
+                <td>51GB 30 Hari</td>
+                <td>Rp 107.000</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h3 style="text-align: center; margin-top: 80px;">Kouta Unli</h3>
+    <table class="price-table">
+        <thead>
+            <tr>
+                <th>Nominal</th>
+                <th>Harga</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1GB/h 7 Hari</td>
+                <td>Rp 24.000</td>
+            </tr>
+            <tr>
+                <td>3GB/h 7 Hari</td>
+                <td>Rp 35.000</td>
+            </tr>
+            <tr>
+                <td>5GB/h 7 Hari</td>
+                <td>Rp 54.000</td>
+            </tr>
+            <tr>
+                <td>1GB/h 14 Hari</td>
+                <td>Rp 48.000</td>
+            </tr>
+            <tr>
+                <td>700MB/h 28 Hari</td>
+                <td>Rp 70.000</td>
+            </tr>
+            <tr>
+                <td>1GB/h 28 Hari</td>
+                <td>Rp 72.000</td>
+            </tr>
+            <tr>
+                <td>2GB 28 Hari</td>
+                <td>Rp 88.000</td>
+            </tr>
+            <tr>
+                <td>3GB/h 28 Hari</td>
+                <td>Rp 122.000</td>
+            </tr>
+            <tr>
+                <td>5GB/h 28 Hari</td>
+                <td>Rp 180.000</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <footer class="footer">
+        <p>&copy; 2025 Fhiks Store. @fikhdytlah</p>
+    </footer>
+</body>
+</html>
