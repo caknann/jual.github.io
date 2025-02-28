@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pilih Paket Data - Digital Store</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.75rem;
+            font-weight: bold;
+            color: #2563eb;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #4b5563;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #2563eb;
+        }
+
+        .card {
+            max-width: 600px;
+            margin: 80px auto 20px;
+            text-align: center;
+        }
+
+        .card a {
+            display: block;
+            padding: 1rem;
+            margin: 1rem 0;
+            background-color: #2563eb;
+            color: white;
+            text-decoration: none;
+            border-radius: 0.5rem;
+            transition: background-color 0.3s;
+        }
+
+        .card a:hover {
+            background-color: #1d4ed8;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #1f2937;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">Fhiks Store</div>
+            <div class="nav-links">
+                <a href="index.html">Kembali</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="card">
+        <h2>Pilih Jenis Paket Data Anda</h2>
+        <a href="hargaindosat.html?operator=indosat">Indosat</a>
+        <a href="hargasmartfren.html?operator=smartfren">Smartfren</a>
+        <a href="hargathree.html?operator=three">Three</a>
+        <a href="hargabyu.html?operator=byu">Byu</a>
+        <a href="hargaxl.html?operator=xl">XL</a>
+        <a href="hargaaxis.html">Axis</a>
+        <a href="hargatelkomsel.html?operator=telkomsel">Telkomsel</a>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2025 Fhiks Store. @fikhdytlah</p>
+    </footer>
+</body>
+</html>
