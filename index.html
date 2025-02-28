@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fhiks Store - Pulsa & Layanan Digital</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* Navbar Styles */
+        .navbar {
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.75rem;
+            font-weight: bold;
+            color: #2563eb;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            width: 100px; /* Ukuran logo */
+            margin-right: 10px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #4b5563;
+            transition: color 0.3s;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: #2563eb;
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: #2563eb;
+            color: white;
+            padding: 10rem 2rem 6rem;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.4rem;
+            margin-bottom: 2rem;
+        }
+
+        .cta-button {
+            background-color: white;
+            color: #2563eb;
+            padding: 0.8rem 2rem;
+            border-radius: 9999px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-button:hover {
+            background-color: #f3f4f6;
+        }
+
+        /* Services Section */
+        .services {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #2563eb;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .service-icon {
+            font-size: 2.5rem;
+            color: #2563eb;
+            margin-bottom: 1rem;
+        }
+
+        /* How to Buy Section */
+        .how-to-buy {
+            background-color: #f3f4f6;
+            padding: 4rem 2rem;
+        }
+
+        .steps-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .step-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .step-number {
+            font-size: 2.5rem;
+            color: #2563eb;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            padding: 4rem 2rem;
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .contact-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 0.5rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin: auto;
+        }
+
+        .contact-info {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            justify-content: center;
+        }
+
+        .contact-icon {
+            color: #2563eb;
+            margin-right: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .whatsapp-button {
+            width: 100%;
+            background-color: #2563eb;
+            color: white;
+            padding: 1rem;
+            border: none;
+            border-radius: 0.5rem;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            margin-top: 1rem;
+        }
+
+        .whatsapp-button:hover {
+            background-color: #1d4ed8;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #1f2937;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <img src="logo.png" alt="Logo"> <!-- Ganti 'logo.png' dengan path logo Anda -->
+                Fhiks Store
+            </div>
+            <div class="nav-links">
+                <a href="#services">Layanan</a>
+                <a href="#how-to-buy">Cara Beli</a>
+                <a href="#contact">Kontak</a>
+                <a href="index.html">Kembali ke Beranda</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Solusi Digital Terlengkap</h1>
+        <p>Pulsa, Paket Data, Aplikasi Premium, dan Layanan Digital Lainnya</p>
+        <a href="#contact" class="cta-button">Hubungi Kami</a>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <h2 class="section-title">Layanan Kami</h2>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">📱</div>
+                <h3><a href="pulsa.html">Pulsa All Operator</a></h3>
+                <p>Isi ulang pulsa semua operator dengan harga terbaik</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🌐</div>
+                <h3><a href="paketdata.html">Paket Data</a></h3>
+                <p>Paket internet cepat dan murah untuk semua provider</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">📲</div>
+                <h3><a href="aplikasi.html">Aplikasi Premium</a></h3>
+                <p>Berbagai aplikasi premium dengan harga terjangkau</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">💳</div>
+                <h3><a href="topupmbanking.html">Top Up M-Banking</a></h3>
+                <p>Isi saldo m-banking aman dan terpercaya</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">🎮</div>
+                <h3><a href="topupgameonline.html">Top Up Game Online</a></h3>
+                <p>Top up saldo game online favorit Anda dengan mudah</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon">💵</div>
+                <h3><a href="dompetdigital.html">Dompet Digital</a></h3>
+                <p>Isi ulang dompet digital Anda untuk kemudahan transaksi</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Buy Section -->
+    <section id="how-to-buy" class="how-to-buy">
+        <h2 class="section-title">Cara Pembelian</h2>
+        <div class="steps-container">
+            <div class="step-card">
+                <div class="step-number">1</div>
+                <h3>Hubungi Kami</h3>
+                <p>Pilih layanan yang Anda inginkan dan hubungi kami melalui WhatsApp atau Instagram</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">2</div>
+                <h3>Lakukan Pembayaran</h3>
+                <p>Transfer pembayaran melalui rekening bank atau e-wallet yang tersedia</p>
+            </div>
+            <div class="step-card">
+                <div class="step-number">3</div>
+                <h3>Konfirmasi</h3>
+                <p>Kirimkan bukti pembayaran dan tunggu proses pengisian</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2 class="section-title">Hubungi Kami</h2>
+        <div class="contact-card">
+            <div class="contact-info">
+                <a href="https://instagram.com/mmatcha_latee" target="_blank" class="contact-icon">📷</a>
+                <span><a href="https://instagram.com/mmatcha_latee" target="_blank">Instagram: @mmatcha_latee</a></span>
+            </div>
+
+            <div class="contact-info">
+                <a href="https://wa.me/6288238003633" target="_blank" class="contact-icon">📞</a>
+                <span><a href="https://wa.me/6288238003633" target="_blank">+62 882 3800 3633</a></span>
+            </div>
+            <button class="whatsapp-button" onclick="window.location.href='https://instagram.com/mmatcha_latee'">
+                DM Instagram
+            </button>
+            <button class="whatsapp-button" onclick="window.location.href='https://wa.me/6288238003633'">
+                Chat WhatsApp
+            </button>
+            
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Fhiks Store. @fikhdytlah.</p>
+    </footer>
+
+    <script>
+        // Smooth Scroll for Navigation Links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
